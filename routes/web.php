@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('social/{provider}', 'Socialite\RedirectController@index');
-Route::get('social/{provider}/callback', 'Socialite\CallbackController@index');
+Route::get('{provider}/redirect', 'Socialite\RedirectController@index');
+Route::get('{provider}/callback', 'Socialite\CallbackController@index');

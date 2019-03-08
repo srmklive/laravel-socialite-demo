@@ -11,6 +11,9 @@ class CallbackController extends Controller
     {
         $user = \Socialite::driver($provider)->user();
 
-        return $user;
+        return response()->json([
+            'user'      => $user,
+            'params'    => $request->all()
+        ]);
     }
 }
