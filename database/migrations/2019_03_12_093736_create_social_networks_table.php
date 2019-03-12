@@ -13,6 +13,8 @@ class CreateSocialNetworksTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('social_networks', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('name', ['Facebook', 'Twitter', 'Linkedin', 'Pinterest', 'Youtube']);
@@ -32,6 +34,8 @@ class CreateSocialNetworksTable extends Migration
             $table->foreign('social_network_id')->references('id')->on('social_networks')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
