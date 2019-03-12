@@ -64,12 +64,6 @@
                                 @endif
                             </div>
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <a href="{{ route('provider.redirect', 'facebook') }}" class="btn btn-block"><i class="fab fa-facebook"></i> Login with Facebook</a>
-                            </div>
-                        </div>
                     </form>
                 </div>
             </div>

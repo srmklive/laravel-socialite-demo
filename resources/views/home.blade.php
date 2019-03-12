@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{ route('provider.redirect', 'facebook') }}" class="btn btn-primary"><i class="fab fa-facebook"></i> Connect</a>
                 </div>
             </div>
         </div>

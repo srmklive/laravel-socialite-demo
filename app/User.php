@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function networks()
+    {
+        return $this->belongsToMany(SocialNetwork::class, 'user_social_networks');
+    }
 }
