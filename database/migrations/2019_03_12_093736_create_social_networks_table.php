@@ -23,7 +23,7 @@ class CreateSocialNetworksTable extends Migration
 
         Schema::create('user_social_networks', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedInteger('social_network_id');
             $table->text('token')->nullable();
             $table->enum('status', ['active', 'inactive', 'expired'])->default('inactive');
